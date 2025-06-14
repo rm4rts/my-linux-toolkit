@@ -9,12 +9,12 @@ This repository contains scripts, configurations and notes that I collect while 
 - `dotfiles/` — Configuration files
 - `notes/` — Notes with commands, tricks, guides or technical summaries.
 
-## ❗ Aviso
+## ❗ Warning
 
 These scripts are personal, they may not be 100% safe for production. Use them at your own risk.
 
 ---
 
-## 📜 Licencia
+## 📜 License
 
 This project is licensed under the MIT license. See the LICENSE file for more details.
