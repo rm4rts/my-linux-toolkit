@@ -1,2 +1,2 @@
 # my-linux-toolkit
-Colección personal de scripts, configuraciones y apuntes para administración de sistemas GNU/Linux y ciberseguridad.
+This is my personal colection of scripts, configurations and notes for GNU/Linux systems administration and cybersecurity.
