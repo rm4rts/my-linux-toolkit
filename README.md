@@ -5,15 +5,15 @@ This repository contains scripts, configurations and notes that I collect while 
 
 ## 📁 Structure
 
-- `scripts/` — Useful scripts
-- `dotfiles/` — Configuration files
-- `notes/` — Notes with commands, tricks, guides or technical summaries.
+- `scripts/` - Useful scripts
+- `dotfiles/` - Configuration files
+- `notes/` - Notes with commands, tricks, guides or technical summaries.
+
 
 ## ❗ Warning
 
 These scripts are personal, they may not be 100% safe for production. Use them at your own risk.
 
----
 
 ## 📜 License
 
