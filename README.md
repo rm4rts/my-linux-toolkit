@@ -7,7 +7,7 @@ This repository contains scripts, configurations and notes that I collect while 
 
 - `scripts/` - Useful scripts
 - `dotfiles/` - Configuration files
-- `notes/` - Notes with commands, tricks, guides or technical summaries.
+- `writeups/` - Notes with commands, tricks, guides or technical summaries.
 
 
 ## ❗ Warning
