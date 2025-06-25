@@ -1,0 +1,50 @@
+# CREAR USUARIO
+useradd pepito
+# ASIGNAR LA SHELL (FALTA EL PROMPT)
+usermod -s /bin/bash pepito
+# ASIGNAR EL DIRECTORIO HOME
+usermod -d /home/pepito pepito
+passwd pepito
+
+#CAMBIAR GRUPO PRINCIPAL
+usermod -g GRUPO pepito
+
+#AÑADIR GRUPO A UN USUARIO
+addgroup  pepito GRUPO
+usermod -G GRUPO pepito
+
+#RENOMBRAR USUARIO
+usermod -l  NUEVO ANTIGUO
+usermod -l  recesvinto ataulfo
+
+#BLOQUEO DE UN USUARIO
+usermod -L recesvinto
+
+#DESBLOQUEO DE UN USUARIO
+usermod -U recesvinto
+
+#MOVER DIRECTORIO DE USUARIO
+usermod -d NUEVO -m USUARIO
+usermod -d /var/recesvinto/ -m recesvinto
+
+
+#VER ID  DE USUARIO
+if pepito
+
+#CAMBIAR ID DE USUARIO
+usermod -u 888 pepito
+
+#CAMBIAR ID DE GRUPO
+usermod -u 666 -g 999 pepito
+
+#CREARLO DE CERO
+useradd -m manolito -s /bin/bash -p alumno
+
+#PONER FECHA LÍMITE A UN USUARIO
+usermod -e 2019-11-01 pepito
+
+ARCHIVO DE USUARIOS:
+/etc/passwd
+
+ARCHIVO DE PASSWORDS (LINUX KERNEL > 1.0)
+/etc/shadow

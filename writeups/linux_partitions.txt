@@ -1,0 +1,47 @@
+DEMÁS: particionamiento_linux.docx
+
+MOSTRAR PARÁMETROS DEL HARDWARE DE CUALQUIER DISCO
+hdparm -I /dev/(disco)
+
+FORMATEO DE PARTICIONES/DISCO
+mkfs.(formato) /dev/(partición/disco)
+
+BORRAR TABLA DE PARTICIONES
+fdisk /dev/(disco)
+d
+(Nº de particion)
+w
+
+BORRADO DEL MBR (pone a 0 el primer sector MBR)
+dd if=/dev/zero of=/dev/(disco) bs=512 count=1
+
+BORRADO COMPLETO/CON CEROS:
+dd if=/dev/zero of=/dev/(disco)
+
+BORRADO CON DATOS ALEATORIOS:
+dd if=/dev/urandom of=/dev/(disco) bs=512
+
+DD
+dd if=(origen) of=(destino)
+
+BORRAR TODAS LAS IMÁGENES:
+rm *img
+
+PARTICIONAR CUALQUIER PARTICIÓN COMO GPT o MBR:
+GPT: Crearlas tal cual y al final poner la "g"
+MBR: Se pone por defecto, pero sería poner al final "o"
+
+MONTAR UNA PARTICIÓN
+mount /dev/(partición) /mnt/(disco1)
+
+DESMONTAR UNA PARTICIÓN
+umount /mnt/(disco1)
+
+SACAR IMAGEN DE DISCO COMPRIMIDA
+dd if=/dev/(disco origen) bs=2048 | bzip2 > (nombre imagen).bz2
+
+RESTAURAR EL PASO ANTERIOR
+bunzip2 -c (nombre imagen).bz2 |  dd of=/dev/(disco origen) bs=2048  
+
+MANDAR ESTA IMAGEN A OTRO YA DESCOMPRIMIDA
+bunzip2 -c (nombre imagen).bz2 | dd of=/dev/(disco destino)

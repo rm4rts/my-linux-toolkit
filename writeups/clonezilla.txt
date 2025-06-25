@@ -1,0 +1,43 @@
+cuando se crea la máquina virtual, es conveniente crear un disco para guardar imágenes.
+
+Particionar:
+	En el CMD: sudo su (entrar como administrador)
+
+fdisk -l
+
+fdisk /dev/sda
+		-->n (Nueva)
+		-->p (Partición primaria)
+		-->1 (Primera partición)
+		-->ENTER (Primer sector)
+		-->ENTER (Último sector)
+		-->w (grabar)
+
+		mkfs.ext4 /dev/sda1 (Formatea primera partición)
+		
+
+En arranque:
+	Start Clonezilla
+
+		Opciones: 	Device-image:  Desde disco a imagen (archivo) o viceversa.
+						local_dev: Disco local donde se guardan las imágenes (va a ser /dev/sda1)
+							savedisk: Guarda discos completos
+								Nombre de la imagen. (Pone una fecha y un nombre de archivo IMG)
+								Disco a guardar en formato imagen: (/dev/sde)
+							restoredisk: 
+								Disco local donde se guardan las imágenes (va a ser /dev/sda1)
+								Restaura un archivo de disco a un disco. (/dev/sdf)
+							
+							savepart: Guarda particiones en archivo (/dev/sdf1)
+							restoreparts: Restaura un archivo en una partición: 
+								Disco local donde se guardan las imágenes (va a ser /dev/sda1)
+								Restaura un archivo de disco a una particion. (/dev/sb1)
+							
+					Device-Device: Directamente de disco a disco.
+						Disk_to_local_disk: De disco a disco		
+							Source: Elegir origen 	(/dev/sdb)
+							Target: Destino			(/dev/sde)
+						part_to_local_part: De partición a partición.  Debe estar creada la partición de destino.
+							Source: Elegir origen 	(/dev/sdb1)
+							Target: Destino			(/dev/sde1)
+					
